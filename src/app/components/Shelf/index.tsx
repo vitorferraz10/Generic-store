@@ -9,14 +9,17 @@ export function ShelfProducts({
   listProduct: ProductsType[];
 }) {
   return (
-    <ul>
-      <CardProducts />
-      {listProduct.map(({ images, name }) => (
+    <ul className="flex gap-5 flex-col md:flex-row">
+      {listProduct.map(({ images, name, description, price, id }) => (
         <>
-          <li>
-            <img src={images[0]} />
-          </li>
-          <li>{name}</li>
+          <CardProducts
+            key={Math.random()}
+            images={images}
+            name={name}
+            description={description}
+            price={price}
+            id={id}
+          />
         </>
       ))}
     </ul>

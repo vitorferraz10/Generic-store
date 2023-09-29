@@ -1,35 +1,29 @@
-import * as React from "react"
 
 import { Button } from "../ui/button"
 import {
   Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
+  CardContent, CardFooter,
+  CardHeader
 } from "../ui/card"
-import { Label } from "../ui/label"
+import { ProductShowInfoType } from "@/types/products"
 
-export function CardProducts() {
+export function CardProducts({name, price, images, description }: ProductShowInfoType) {
   return (
-    <Card className="w-[350px]">
-      <CardHeader>
-        <CardTitle>Create project</CardTitle>
-        <CardDescription>Deploy your new project in one-click.</CardDescription>
+    <Card className="w-[350px] relative">
+      <CardHeader className="h-80 flex justify-center">
+        <img src={images[0]} />
       </CardHeader>
-      <CardContent>
-        <form>
+      <CardContent className="mb-2">
           <div className="grid w-full items-center gap-4">
             <div className="flex flex-col space-y-1.5">
-              <Label htmlFor="name">Name</Label>
+              <span>{name}</span>
+              <p>{description}</p>
+              <h4>R$ {price.toLocaleString('pt-br')}</h4>
             </div>
           </div>
-        </form>
       </CardContent>
-      <CardFooter className="flex justify-between">
-        <Button variant="outline">Cancel</Button>
-        <Button>Deploy</Button>
+      <CardFooter className="w-full flex justify-center px-2 pr-2 mb-2">
+        <Button className="w-[90%] absolute bottom-0 pr-2 mb-2">Adicionar ao carrinho</Button>
       </CardFooter>
     </Card>
   )

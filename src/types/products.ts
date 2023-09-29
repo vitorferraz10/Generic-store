@@ -9,4 +9,6 @@ export interface ProductsType {
   name: string
 }
 
+export type ProductShowInfoType = Omit<ProductsType, 'object' | 'created' | 'active'>
+
 export interface Metadata {}
