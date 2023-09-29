@@ -1,6 +1,5 @@
 "use client";
 
-import { Card, CardContent } from "@/app/components/ui/card";
 import { ProductsType } from "@/types/products";
 import { CardProducts } from "../CardProducts";
 
