@@ -31,7 +31,7 @@ const Cart = () => {
               </SheetHeader>
               <div className="flex gap-2 flex-col mb-8">
                 {productCart.map((p) => (
-                  <ProductCart dataProductCard={p} />
+                  <ProductCart dataProductCard={p} key={Math.random()}/>
                 ))}
               </div>
               <hr />
