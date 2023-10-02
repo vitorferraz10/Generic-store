@@ -17,8 +17,6 @@ const Cart = () => {
   const { productCart } = useCart();
   const { cartCount, totalPrice } = useShoppingCart();
 
-  console.log(totalPrice)
-
   return (
     <Sheet>
       <SheetTrigger>
