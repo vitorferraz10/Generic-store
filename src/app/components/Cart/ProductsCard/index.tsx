@@ -1,18 +1,23 @@
-import React from "react";
-import { Card, CardContent, CardFooter, CardHeader } from "../../ui/card";
+import { Card, CardContent, CardHeader } from "../../ui/card";
 import { Button } from "../../ui/button";
 import { ProductCartType } from "@/types/products";
+import { useShoppingCart } from "use-shopping-cart";
 
 const ProductCart = ({
   dataProductCard,
 }: {
   dataProductCard: ProductCartType;
 }) => {
+  const { removeItem } = useShoppingCart();
+
   return (
     <Card className="w-full">
       <CardHeader className="flex flex-row justify-between items-center">
         <img src={dataProductCard.images[0]} className="h-36 w-36" />
-        <Button className="w-16 p-2 text-xs" onClick={(e) => console.log(e)}>
+        <Button
+          className="w-16 p-2 text-xs"
+          onClick={() => removeItem(dataProductCard.id)}
+        >
           Remover
         </Button>
       </CardHeader>
