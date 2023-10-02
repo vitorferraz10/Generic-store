@@ -2,6 +2,7 @@
 
 import { useProduct } from "@/hooks/useProducts";
 import { ShelfProducts } from "./components/Shelf";
+import { Toaster } from "./components/ui/toaster";
 
 export default function Home() {
   const { products } = useProduct();
@@ -9,6 +10,7 @@ export default function Home() {
   return (
     <div className="h-screen flex justify-center items-center w-full">
       <ShelfProducts listProduct={products || []} />
+      <Toaster />
     </div>
   );
 }

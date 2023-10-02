@@ -10,7 +10,7 @@ export function ShelfProducts({
 }) {
   return (
     <ul className="flex gap-5 flex-col md:flex-row">
-      {listProduct.map(({ images, name, description, price, id }) => (
+      {listProduct.map(({ images, name, description, price, id, currency }) => (
         <>
           <CardProducts
             key={Math.random()}
@@ -19,6 +19,7 @@ export function ShelfProducts({
             description={description}
             price={price}
             id={id}
+            currency={currency}
           />
         </>
       ))}
