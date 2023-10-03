@@ -20,7 +20,7 @@
     "clsx": "^2.0.0",
     "lucide-react": "^0.279.0",
     "next": "latest",
-    "postcss": "^8.4.30",
+    "postcss": "^8.4.31",
     "react": "latest",
     "react-dom": "latest",
     "stripe": "^13.7.0",
