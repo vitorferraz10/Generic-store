@@ -3,6 +3,7 @@ import { Button } from "../../ui/button";
 import { ProductCartType } from "@/types/products";
 import { useShoppingCart } from "use-shopping-cart";
 import { RiDeleteBin5Line } from "react-icons/ri";
+import Image from "next/image";
 
 const ProductCart = ({
   dataProductCard,
@@ -14,7 +15,7 @@ const ProductCart = ({
   return (
     <Card className="w-full">
       <CardHeader className="flex flex-row justify-between items-center">
-        <img src={dataProductCard.images[0]} className="h-36 w-36" />
+        <Image src={dataProductCard.images[0]} className="h-36 w-36" alt={`Imagem do produto ${dataProductCard.name}`}/>
    
          <RiDeleteBin5Line className="w-7 h-7 hover" onClick={() => removeItem(dataProductCard.id)}/>
      
