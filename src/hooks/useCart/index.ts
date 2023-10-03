@@ -7,7 +7,7 @@ import { useShoppingCart } from "use-shopping-cart";
 export function useCart() {
   const [productCart, setProductCart] = useState<ProductCartType[]>([]);
   const { cartDetails } = useShoppingCart();
-
+  
   useEffect(() => {
     let entries: ProductCartType[] = [];
 

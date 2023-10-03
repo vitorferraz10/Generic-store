@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader } from "../../ui/card";
 import { Button } from "../../ui/button";
 import { ProductCartType } from "@/types/products";
 import { useShoppingCart } from "use-shopping-cart";
+import { RiDeleteBin5Line } from "react-icons/ri";
 
 const ProductCart = ({
   dataProductCard,
@@ -14,12 +15,9 @@ const ProductCart = ({
     <Card className="w-full">
       <CardHeader className="flex flex-row justify-between items-center">
         <img src={dataProductCard.images[0]} className="h-36 w-36" />
-        <Button
-          className="w-16 p-2 text-xs"
-          onClick={() => removeItem(dataProductCard.id)}
-        >
-          Remover
-        </Button>
+   
+         <RiDeleteBin5Line className="w-7 h-7 hover" onClick={() => removeItem(dataProductCard.id)}/>
+     
       </CardHeader>
       <CardContent className="mb-2">
         <div className="grid w-full items-center gap-4">
