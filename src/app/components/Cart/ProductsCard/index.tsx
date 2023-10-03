@@ -15,7 +15,7 @@ const ProductCart = ({
   return (
     <Card className="w-full">
       <CardHeader className="flex flex-row justify-between items-center">
-        <Image src={dataProductCard.images[0]} className="h-36 w-36" alt={`Imagem do produto ${dataProductCard.name}`}/>
+        <img src={dataProductCard.images[0]} className="h-36 w-36" alt={`Imagem do produto ${dataProductCard.name}`}/>
    
          <RiDeleteBin5Line className="w-7 h-7 hover" onClick={() => removeItem(dataProductCard.id)}/>
      

@@ -36,7 +36,7 @@ export function CardProducts({
   return (
     <Card className={`${size === 'small' ? 'w-8/12' : 'w-[350px]' } relative rounded-2xl`}>
       <CardHeader className="h-80 flex justify-center">
-        <Image src={images[0]} alt={`Imagem do produto ${name}`}/>
+        <img src={images[0]} alt={`Imagem do produto ${name}`}/>
       </CardHeader>
       <CardContent className="mb-2">
         <div className="grid w-full items-center gap-4">
