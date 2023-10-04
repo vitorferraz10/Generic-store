@@ -33,6 +33,7 @@ export function CardProducts({
       description: "Item adicionado",
     });
   }
+  
   return (
     <Card className={`${size === 'small' ? 'w-8/12' : 'w-[350px]' } relative rounded-2xl`}>
       <CardHeader className="h-80 flex justify-center">

@@ -8,7 +8,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "../ui/sheet";
-import { GiShoppingCart } from "react-icons/gi";
+import { BsFillCartFill } from "react-icons/bs";
 import { useCart } from "@/hooks/useCart";
 import ProductCart from "./ProductsCard";
 import { useShoppingCart } from "use-shopping-cart";
@@ -22,8 +22,9 @@ const Cart = () => {
 
   return (
     <Sheet>
-      <SheetTrigger>
-        <GiShoppingCart className="w-10 h-10" />
+      <SheetTrigger className="relative top-2 hover:brightness-50">
+        <BsFillCartFill className="w-10 h-11 fill-white" />
+        <span className="relative bottom-9 left-[2px] text-xs">{cartCount}</span>
       </SheetTrigger>
       {
         <SheetContent className="overflow-y-auto">
