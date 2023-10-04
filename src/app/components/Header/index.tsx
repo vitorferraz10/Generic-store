@@ -27,7 +27,7 @@ const Header = () => {
           <Cart />
         </div>
       </div>
-      {/* <Input.InputHeaderMobile /> */}
+      <Input.InputHeaderMobile />
     </div>
   );
 };
