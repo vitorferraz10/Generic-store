@@ -1,6 +1,8 @@
 "use client";
+import Link from "next/link";
 import Cart from "../Cart";
 import { Input } from "./Input";
+import HelpSheet from "../Help";
 
 const Header = () => {
   return (
@@ -15,12 +17,14 @@ const Header = () => {
 
         <Input.InputHeaderDesktop />
 
-        <nav className="flex gap-3">
+        <nav className="flex gap-4 items-center justify-center">
           <span className="text-white font-bold hover:cursor-pointer hover:brightness-50 text-sm md:text-base">
+            <Link href='/products'>
             Produtos
+            </Link>
           </span>
           <span className="text-white font-bold hover:cursor-pointer hover:brightness-50 text-sm md:text-base">
-            Ajuda
+            <HelpSheet />
           </span>
         </nav>
         <div className="flex justify-center items-center">
