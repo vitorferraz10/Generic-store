@@ -10,7 +10,7 @@ const HelpSheet = () => {
       {
         <SheetContent className="overflow-y-auto" side="left">
           <SheetHeader>
-            <span className=" relative uppercase font-bold bottom-3">Meu carrinho</span>
+            <span className=" relative uppercase font-bold bottom-3 text-lg">AJUDA</span>
           </SheetHeader>
          <MenuHelp />
         </SheetContent>

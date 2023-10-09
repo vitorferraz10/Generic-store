@@ -14,14 +14,10 @@ const Header = () => {
             Exemplo
           </span>
         </div>
-
         <Input.InputHeaderDesktop />
-
         <nav className="flex gap-4 items-center justify-center">
           <span className="text-white font-bold hover:cursor-pointer hover:brightness-50 text-sm md:text-base">
-            <Link href='/products'>
-            Produtos
-            </Link>
+            <Link href="/products">Produtos</Link>
           </span>
           <span className="text-white font-bold hover:cursor-pointer hover:brightness-50 text-sm md:text-base">
             <HelpSheet />
