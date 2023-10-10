@@ -9,3 +9,5 @@ jobs:
       run: yarn install
     - name: Run lint
       run: yarn lint --fix
+    - name: Run test 
+      run: yarn test
