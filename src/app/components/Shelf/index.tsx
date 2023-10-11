@@ -20,6 +20,7 @@ export function ShelfProducts({
             price={price}
             id={id}
             currency={currency}
+            size="default"
           />
         </>
       ))}

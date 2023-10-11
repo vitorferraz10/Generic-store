@@ -5,7 +5,6 @@ import { Card, CardContent, CardFooter, CardHeader } from "../ui/card";
 import {  CardProductsTypes } from "@/types/products";
 import { useShoppingCart, formatCurrencyString } from "use-shopping-cart";
 import { useToast } from "../ui/use-toast";
-import Image from "next/image";
 
 export function CardProducts({
   size = 'default',
