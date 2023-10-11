@@ -6,9 +6,8 @@ import BannerMain from ".";
 describe("BannerMain", () => {
   
   it("renders without crashing", () => {
-    const { getAllByRole } = render(<BannerMain />);
-    const images = getAllByRole("img");
-    console.log(images)
-    expect(images.length).toBe(1);
+    const { getAllByAltText } = render(<BannerMain />);
+    const images = getAllByAltText(/banner/);
+    expect(images.length).toBe(2);
   });
 });

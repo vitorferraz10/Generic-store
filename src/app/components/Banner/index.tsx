@@ -18,6 +18,7 @@ function BannerMain() {
       animation="fade"
       IndicatorIcon={isMobile}
       fullHeightHover
+      interval={1}
     >
       <Paper>
         <Image src={Banner1} alt="banner" layout="fill" objectFit="cover" />
