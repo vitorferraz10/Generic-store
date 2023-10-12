@@ -9,8 +9,9 @@ export default function Home() {
   const { products } = useProduct();
 
   return (
-    <div className="">
+    <div className="h-full w-full">
      <BannerMain />
+     <ShelfProducts listProduct={products!}/>
       <Toaster />
     </div>
   );

@@ -5,6 +5,7 @@ import { Card, CardContent, CardFooter, CardHeader } from "../ui/card";
 import {  CardProductsTypes } from "@/types/products";
 import { useShoppingCart, formatCurrencyString } from "use-shopping-cart";
 import { useToast } from "../ui/use-toast";
+import Image from "next/image";
 
 export function CardProducts({
   size = 'default',
@@ -34,15 +35,14 @@ export function CardProducts({
   }
   
   return (
-    <Card className={`${size === 'small' ? 'w-8/12' : 'w-[350px]' } relative rounded-2xl`}>
-      <CardHeader className="h-80 flex justify-center">
-        <img src={images[0]} alt={`Imagem do produto ${name}`}/>
+    <Card className={`${size === 'small' ? 'w-64' : 'w-[350px]' } h-96 relative rounded-2xl mb-3`}>
+      <CardHeader className="flex h-[250px] justify-center mb-2">
+        <Image src={String(images[0])} alt={`Imagem do produto ${name}`} width={250} height={250}/>
       </CardHeader>
       <CardContent className="mb-2">
         <div className="grid w-full items-center gap-4">
           <div className="flex flex-col space-y-1.5">
-            <span>Nome: {name}</span>
-            <p>Descrição: {description}</p>
+            <span>{name}</span>
             <h4 className="font-bold">{formattedPrice}</h4>
           </div>
         </div>
