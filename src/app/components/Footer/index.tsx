@@ -86,9 +86,10 @@ const Footer = () => {
         <div></div>
       </footer>
       <div className="w-full bg-[#EAE9E6] h-8 flex items-center justify-center">
-        <span className="font-normal w-full text-sm text-[#575756] flex justify-center text-center">
-          Endereço da loja ou qualquer outra informação, 1234 - CEP:
-          012345678945 • São Paulo / SP • Brasil
+        <span className="font-normal w-full text-[10px] text-[#575756] flex justify-center text-center md:text-sm">
+          Endereço da loja ou qualquer outra informação, 1234 -
+          <br className="md:hidden"/>
+           CEP: 012345678945 • São Paulo / SP • Brasil
         </span>
       </div>
     </>
