@@ -1,8 +1,7 @@
-import { Card, CardContent, CardHeader } from "../../ui/card";
-import { Button } from "../../ui/button";
 import { ProductCartType } from "@/types/products";
 import { useShoppingCart } from "use-shopping-cart";
-import { RiDeleteBin5Line } from "react-icons/ri";
+import { BiNoEntry } from "react-icons/bi";
+import { GrAddCircle } from "react-icons/gr";
 import Image from "next/image";
 
 const ProductCart = ({
@@ -10,26 +9,42 @@ const ProductCart = ({
 }: {
   dataProductCard: ProductCartType;
 }) => {
-  const { removeItem } = useShoppingCart();
+  const { decrementItem, incrementItem, handleCloseCart } = useShoppingCart();
+  const { images, name, formattedPrice, quantity, id } = dataProductCard;
+
+  console.log(dataProductCard.name);
 
   return (
-    <Card className="w-full">
-      <CardHeader className="flex flex-row justify-between items-center">
-        <img src={dataProductCard.images[0]} className="h-36 w-36" alt={`Imagem do produto ${dataProductCard.name}`}/>
-   
-         <RiDeleteBin5Line className="w-7 h-7 hover" onClick={() => removeItem(dataProductCard.id)}/>
-     
-      </CardHeader>
-      <CardContent className="mb-2">
-        <div className="grid w-full items-center gap-4">
-          <div className="flex flex-col space-y-1.5">
-            <span>Nome: {dataProductCard.name}</span>
-            <p>Descrição: {dataProductCard.description}</p>
-            <h4 className="font-bold">{dataProductCard.formattedPrice}</h4>
-          </div>
+    <div className="w-full h-28">
+      <div className="flex gap-4 items-center justify-between h-full">
+        <Image
+          src={images[0]}
+          width={64}
+          height={64}
+          alt={`Imagem do produto ${name}`}
+        />
+        <div className="flex flex-col">
+          <span className="font-normal text-[#1D1D1B] text-sm truncate w-[146px]">
+            {name}
+          </span>
+          <span className="font-bold text-base text-[#1D1D1B]">
+            {formattedPrice}
+          </span>
         </div>
-      </CardContent>
-    </Card>
+        <span className="flex gap-2 justify-center content-center">
+          <BiNoEntry
+            className="w-5 h-5 cursor-pointer"
+            onClick={() => decrementItem(id)}
+          />
+          <span>{quantity}</span>
+          <GrAddCircle
+            className="w-5 h-5 cursor-pointer"
+            onClick={() => incrementItem(id)}
+          />
+        </span>
+      </div>
+      <hr />
+    </div>
   );
 };
 

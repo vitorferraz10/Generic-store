@@ -1,12 +1,12 @@
 import "../globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { League_Spartan } from "next/font/google";
 import AppCardProvider from "./components/Shop/CardProvider";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = League_Spartan({ subsets: ["latin"] });
 
 
 export const metadata: Metadata = {
