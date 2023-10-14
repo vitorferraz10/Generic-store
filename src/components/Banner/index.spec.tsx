@@ -1,7 +1,6 @@
 import { useDeviceDetect } from "@/hooks/useDevice";
 import BannerMain from ".";
 import wrapperRender from "@/tests/render";
-import { render } from "react-dom";
 
 jest.mock("@/hooks/useDevice");
 
