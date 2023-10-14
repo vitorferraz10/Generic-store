@@ -1,6 +1,7 @@
+import { Input } from "app/components/ui/input";
 import React from "react";
 
-import { Input } from "../../ui/input";
+
 import { AiOutlineSearch } from "react-icons/ai";
 
 const InputHeaderDesktop = () => {

@@ -4,8 +4,8 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../../../components/ui/accordion";
-import { Separator } from "../../../components/ui/separator";
+} from "../../ui/accordion";
+import { Separator } from "../../ui/separator";
 import Link from "next/link";
 import { BsFacebook } from "react-icons/bs";
 import {
