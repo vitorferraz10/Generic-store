@@ -25,8 +25,6 @@ const Cart = () => {
     handleCloseCart();
   }
 
-  console.log("productCart", productCart);
-
   return (
     <Sheet>
       <SheetTrigger className="relative top-2 hover:brightness-50">

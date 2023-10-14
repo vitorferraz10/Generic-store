@@ -10,7 +10,6 @@ import { settings } from "./types";
 function BannerMain() {
   const { isMobile } = useDeviceDetect();
 
-  console.log(isMobile);
   return (
     <div className="max-w-screen-[2000px] relative mx-auto mt-6 h-[400px] md:h-[700px] overflow-hidden mb-6">
       <Slider {...settings}>

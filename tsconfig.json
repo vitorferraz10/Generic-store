@@ -26,7 +26,8 @@
       "@/assets/*": ["assets/*"], 
       "@/hooks/*": ["hooks/*"], 
       "@/types/*": ["types/*"], 
-      "@/lib/*": ["lib/*"]
+      "@/lib/*": ["lib/*"], 
+      "@/tests/*": ["tests/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/api/checkout_session.js", "src/tests/setupTests.js", "jest.config.js"],
