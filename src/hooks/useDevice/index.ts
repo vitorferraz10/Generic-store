@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 export const enum SizeScreens {
-  desktop = 1024,
+  desktop = 768,
 }
 
 export const useDeviceDetect = () => {

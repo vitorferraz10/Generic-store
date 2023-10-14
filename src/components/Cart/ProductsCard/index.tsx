@@ -12,8 +12,6 @@ const ProductCart = ({
   const { decrementItem, incrementItem, handleCloseCart } = useShoppingCart();
   const { images, name, formattedPrice, quantity, id } = dataProductCard;
 
-  console.log(dataProductCard.name);
-
   return (
     <div className="w-full h-28">
       <div className="flex gap-4 items-center justify-between h-full">
