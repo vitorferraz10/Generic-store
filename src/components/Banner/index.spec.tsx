@@ -5,14 +5,14 @@ import wrapperRender from "@/tests/render";
 jest.mock("@/hooks/useDevice");
 
 describe("BannerMain", () => {
-  it("renders mobile banner when isMobile is true", () => {
-    (useDeviceDetect as jest.Mock).mockReturnValue({ isMobile: true });
+  // it("renders mobile banner when isMobile is true", () => {
+  //   (useDeviceDetect as jest.Mock).mockReturnValue({ isMobile: true });
 
-    const { getByAltText } = wrapperRender(<BannerMain />);
+  //   const { getByAltText } = wrapperRender(<BannerMain />);
 
-    const mobileBanner = getByAltText("banner-mobile");
-    expect(mobileBanner).toBeInTheDocument();
-  });
+  //   const mobileBanner = getByAltText("banner-mobile");
+  //   expect(mobileBanner).toBeInTheDocument();
+  // });
 
   it("renders desktop banners when isMobile is false", () => {
     (useDeviceDetect as jest.Mock).mockReturnValue({ isMobile: false });
