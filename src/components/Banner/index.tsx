@@ -11,24 +11,15 @@ function BannerMain() {
   const { isMobile } = useDeviceDetect();
 
   return (
-    <div className="max-w-screen-[2000px] relative mx-auto mt-6 h-[400px] md:h-[700px] overflow-hidden mb-6">
+    <div className="max-w-screen-[2000px] relative mx-auto mt-6 h-[400px] md:h-[700px] overflow-hidden mb-6 flex flex-col justify-center content-center md:mt-20">
       <Slider {...settings}>
         <div className="w-full h-full flex items-center justify-center">
-          <Image src={Banner1} alt="banner" width={2000} height={720} />
+          <Image src={Banner1} alt="banner" width={2000} height={isMobile ? 300 : 720} />
         </div>
-        <div className="max-[2000px] mx-auto h-[720px]">
+        <div className="w-full h-full flex items-center justify-center">
           <Image src={Banner2} alt="banner" width={2000} height={720} />
         </div>
       </Slider>
-
-      {isMobile && (
-        <Image
-          alt="banner-mobile"
-          src={BannerMobile}
-          fill
-          sizes="(max-width: 768px) 100vw"
-        />
-      )}
     </div>
   );
 }

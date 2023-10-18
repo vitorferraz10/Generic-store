@@ -4,10 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build ",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --env=jsdom --config=jest.config.js --coverage"
+    "test": "jest --env=jsdom --config=jest.config.js --coverage", 
+    "deploy:prod": "yarn deploy --prod --token=VERCEL_TOKEN",
+    "deploy": "yarn build && npx vercel ./build --confirm --no-clipboard"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.1.2",
