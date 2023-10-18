@@ -17,7 +17,7 @@ describe("BannerMain", () => {
   it("renders desktop banners when isMobile is false", () => {
     (useDeviceDetect as jest.Mock).mockReturnValue({ isMobile: false });
 
-    const { getByAltText, getAllByAltText } = wrapperRender(<BannerMain />);
+    const { getAllByAltText } = wrapperRender(<BannerMain />);
 
     const banner1 = getAllByAltText("banner")[0];
     const banner2 = getAllByAltText("banner")[1];
