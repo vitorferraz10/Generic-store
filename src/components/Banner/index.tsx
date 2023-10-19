@@ -2,7 +2,6 @@
 import Image from "next/image";
 import Banner1 from "@/assets/banner.jpg";
 import Banner2 from "@/assets/sales-banner.jpg";
-import BannerMobile from "@/assets/mobile-banner.jpg";
 import { useDeviceDetect } from "@/hooks/useDevice";
 import Slider from "react-slick";
 import { settings } from "./types";
