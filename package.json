@@ -9,9 +9,11 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest --env=jsdom --config=jest.config.js --coverage",
-    "deploy:staging": "node ./scripts/pullRequestPreview",
-    "deploy:prod": "yarn deploy --prod --token=$VERCEL_TOKEN",
-    "deploy": "yarn build && npx vercel --yes"
+    "deploy": "yarn build && npx vercel --yes",
+    "deploy:staging": "yarn build --token=$VERCEL_TOKEN",
+    "deploy:preview": "node ./scripts/pullRequestPreview",
+    "deploy:prod": "yarn deploy --prod --token=$VERCEL_TOKEN"
+
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.1.2",
