@@ -31,6 +31,6 @@
       "@/services/*": ["services/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/api/checkout_session.js", "src/tests/setupTests.js", "jest.config.js", "scripts/pullRequestPreview.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/api/checkout_session.js", "src/tests/setupTests.js", "jest.config.js"],
   "exclude": ["node_modules"]
 }
