@@ -10,7 +10,7 @@
     "lint": "next lint",
     "test": "jest --env=jsdom --config=jest.config.js --coverage",
     "deploy": "yarn build && npx vercel --yes",
-    "deploy:staging": "yarn build --token=$VERCEL_TOKEN",
+    "deploy:staging": "yarn deploy --token=$VERCEL_TOKEN",
     "deploy:preview": "node ./scripts/pullRequestPreview",
     "deploy:prod": "yarn deploy --prod --token=$VERCEL_TOKEN"
 
