@@ -1,5 +1,5 @@
 // jest.config.js
-const nextJest = require('next/jest');
+import nextJest from 'next/jest';
 
 const createJestConfig = nextJest({
   dir: './',
@@ -25,7 +25,7 @@ const customJestConfig = {
   collectCoverageFrom: ['src/**/*. {js,jsx,ts,tsx}'],
 };
 
-module.exports = async () => ({
+export default async () => ({
   ...(await createJestConfig(customJestConfig)()),
    moduleNameMapper: {
     '@/(.*)$': '<rootDir>/src/$1',
