@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest --env=jsdom --config=jest.config.js --coverage", 
-    "deploy:prod": "yarn deploy --prod --token=VERCEL_TOKEN",
+    "deploy:prod": "yarn deploy --prod --token=$VERCEL_TOKEN",
     "deploy": "yarn build && npx vercel --yes"
   },
   "dependencies": {
