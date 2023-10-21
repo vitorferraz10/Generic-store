@@ -2,14 +2,18 @@
   "name": "teste-stripe",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --env=jsdom --config=jest.config.js --coverage", 
-    "deploy:prod": "yarn deploy --prod --token=$VERCEL_TOKEN",
-    "deploy": "yarn build && npx vercel --yes"
+    "test": "jest --env=jsdom --config=jest.config.js --coverage",
+    "deploy": "yarn build && npx vercel --yes",
+    "deploy:staging": "yarn deploy --token=$VERCEL_TOKEN",
+    "deploy:preview": "node ./scripts/pullRequestPreview",
+    "deploy:prod": "yarn deploy --prod --token=$VERCEL_TOKEN"
+
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.1.2",
@@ -25,6 +29,7 @@
     "clsx": "^2.0.0",
     "lucide-react": "^0.279.0",
     "next": "latest",
+    "node-fetch": "^3.3.2",
     "postcss": ">=8.4.31",
     "react": "latest",
     "react-dom": "latest",

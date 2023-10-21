@@ -1,7 +1,13 @@
 name: "CI: Main workflow"
+env: 
+  VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GITHUB_PR_NUMBER: ${{ github.event.pull_request.number }}
 on: push
 jobs:
-  my-job:
+  linter:
    runs-on: ubuntu-latest
    steps:
     - uses: actions/checkout@v3
@@ -11,3 +17,11 @@ jobs:
       run: yarn lint --fix
     - name: Run test 
       run: yarn test
+  preview: 
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run Installation
+        run: yarn install
+      - name: Run Preview Deployment
+        run: yarn deploy:staging
