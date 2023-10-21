@@ -17,6 +17,16 @@ jobs:
       run: yarn lint --fix
     - name: Run test 
       run: yarn test
+  test :
+     runs-on: ubuntu-latest
+     steps:
+         - uses: actions/checkout@v3
+         - name: Install dependencies 
+           run: yarn install
+         - name: Run lint
+           run: yarn lint --fix
+         - name: Run test 
+           run: yarn test
   preview: 
     runs-on: ubuntu-latest
     steps:
