@@ -1,5 +1,5 @@
 name: "CI: Main workflow"
-env: 
+env:
   VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
@@ -8,26 +8,17 @@ env:
 on: push
 jobs:
   linter:
-   runs-on: ubuntu-latest
-   steps:
-    - uses: actions/checkout@v3
-    - name: Install dependencies 
-      run: yarn install
-    - name: Run lint
-      run: yarn lint --fix
-    - name: Run test 
-      run: yarn test
-  test :
-     runs-on: ubuntu-latest
-     steps:
-         - uses: actions/checkout@v3
-         - name: Install dependencies 
-           run: yarn install
-         - name: Run lint
-           run: yarn lint --fix
-         - name: Run test 
-           run: yarn test
-  preview: 
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: yarn install
+      - name: Run lint
+        run: yarn lint --fix
+      - name: Run test
+        run: yarn test
+
+  preview:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
