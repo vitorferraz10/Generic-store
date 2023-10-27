@@ -8,7 +8,7 @@ export default function Products() {
   return (
     <div className="h-screen flex justify-center flex-wrap w-full p-4 gap-4">
       {products?.map((item) => (
-        <Link href={`/details/${item.id}`}>
+        <Link href={`/details/${item.id}`} key={Math.random()}>
           <CardProducts {...item} size="default" />
         </Link>
       ))}

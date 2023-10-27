@@ -21,7 +21,7 @@ export function ShelfProducts({
       <Slider {...settings}>
         {listProduct?.map(
           ({ images, name, description, price, id, currency }) => (
-            <Link href={`/details/${id}`}>
+            <Link href={`/details/${id}`} key={Math.random()}>
               <CardProducts
                 key={Math.random()}
                 images={images}
