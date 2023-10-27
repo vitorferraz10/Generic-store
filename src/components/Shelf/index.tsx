@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import { settings } from "./type";
+import Link from "next/link";
 
 export function ShelfProducts({
   listProduct,
@@ -20,7 +21,7 @@ export function ShelfProducts({
       <Slider {...settings}>
         {listProduct?.map(
           ({ images, name, description, price, id, currency }) => (
-            <>
+            <Link href={`/details/${id}`}>
               <CardProducts
                 key={Math.random()}
                 images={images}
@@ -31,7 +32,7 @@ export function ShelfProducts({
                 currency={currency}
                 size="small"
               />
-            </>
+            </Link>
           )
         )}
       </Slider>
