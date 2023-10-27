@@ -11,6 +11,7 @@ export function useProduct() {
       const dataProducts = await stripe.products.list({
         limit: 9,
         expand: ["data.default_price"],
+        
       });
 
       const formaterProducts = dataProducts.data.map(

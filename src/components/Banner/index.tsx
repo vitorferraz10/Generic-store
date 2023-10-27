@@ -10,7 +10,7 @@ function BannerMain() {
   const { isMobile } = useDeviceDetect();
 
   return (
-    <div className="max-w-screen-[2000px] relative mx-auto mt-6 h-[400px] md:h-[700px] overflow-hidden mb-6 flex flex-col justify-center content-center md:mt-20">
+    <div className="max-w-screen-[2000px] relative mx-auto mt-6 h-[310px] md:h-[700px] overflow-hidden mb-6 flex flex-col justify-center content-center md:mt-20">
       <Slider {...settings}>
         <div className="w-full h-full flex items-center justify-center">
           <Image className="mx-auto" src={Banner1} alt="banner" width={2000} height={isMobile ? 300 : 720} />
